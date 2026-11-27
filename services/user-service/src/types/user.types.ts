@@ -40,7 +40,7 @@ export interface IUser {
   passwordHashed: string;
   authProvider: AuthProvider;
   providerId: string;
-  roles: string;
+  roles: UserRole;
   emailVerified: boolean;
 
   fullName: string;
@@ -71,7 +71,7 @@ export interface IUser {
 }
 
 export interface CreateUserInput {
-    fullName : string
-    email : string
-    passwordHash : string
+  fullName: string;
+  email: string;
+  passwordHash: string;
 }
