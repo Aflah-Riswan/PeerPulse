@@ -69,3 +69,9 @@ export interface IUser {
   createdAt: Date;
   updatedAt: Date;
 }
+
+export interface CreateUserInput {
+    fullName : string
+    email : string
+    passwordHash : string
+}
