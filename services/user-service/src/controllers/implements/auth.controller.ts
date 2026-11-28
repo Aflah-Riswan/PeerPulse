@@ -6,7 +6,7 @@ import { RegisterUserDto } from "../../dtos/auth.dtos.js";
 export class AuthController implements IAuthController {
   constructor(private readonly authService: IAuthService) {}
 
-   register = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  register = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const user = await this.authService.register(req.body as RegisterUserDto);
       res.status(201).json({
@@ -18,5 +18,5 @@ export class AuthController implements IAuthController {
       console.log("error found in auth controller : ", error);
       next(error);
     }
-  }
+  };
 }
